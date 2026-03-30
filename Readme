@@ -1,0 +1,22 @@
+# ZhiYu Spine: Cervical Spine Angle Analysis Tool
+
+[**中文说明**](README_zh-CN.md)
+
+This repository contains a deep learning-based automated measurement tool for cervical X-ray images. It serves as a core module of the **ZhiYu Spine: Intelligent Diagnosis and Treatment System and Customized Implant Consumables for Complex Spinal Diseases**. 
+
+Our research encompasses a complete clinical pipeline: from preoperative planning and 3D printing, combined with novel screw trajectory design, to automated screw placement. This specific tool focuses on analyzing large-scale datasets to profile the characteristics of populations prone to cervical kyphosis and to validate relevant diagnostic models.
+
+## 🌟 Key Features
+* **DICOM Image Preprocessing** (`dcmtopng_enhanced.py`): Optimized conversion tool for X-ray images, featuring smart windowing, CLAHE enhancement, and a conservative mode to preserve spinal details.
+* **Intelligent Detection & Segmentation** (`new_script.py`): Utilizes YOLO models to automatically identify C2-C7 vertebrae and accurately determine the left/right orientation of the image.
+* **Automated Angle Calculation**: Extracts centroids and contours of the vertebral masks to automatically calculate the C2-3, C3-4, C4-5, C5-6, C6-7, and C2-7 angles.
+* **Visualization & Data Export**: User-friendly GUI (`gui_interface.py`) supporting both single-image testing and batch processing. Results are automatically exported to Excel for large-scale data analysis.
+
+## 🛠️ Installation & Deployment
+For detailed environment setup and packaging instructions, please refer to [DEPLOYMENT.md](DEPLOYMENT.md).
+
+## 🚀 Quick Start
+1. Ensure the object detection models (`c2_c7.pt` and `leftright.pt`) are placed in the `pyd/` directory (or adjust the path in the script accordingly).
+2. Run the GUI interface:
+   ```bash
+   python gui_interface.py
