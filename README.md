@@ -1,5 +1,5 @@
 # cervical-spine-cobb
-This repository contains a deep learning-based automated measurement tool for cervical X-ray images. It serves as a core module of the **ZhiYu Spine: Intelligent Diagnosis and Treatment System and Customized Implant Consumables for Complex Spinal Diseases**. 
+This repository contains a deep learning-based automated measurement tool for cervical X-ray images. 
 
 This specific tool focuses on analyzing large-scale datasets to profile the characteristics of populations prone to cervical kyphosis and to validate relevant diagnostic models.
 
